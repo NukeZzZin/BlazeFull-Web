@@ -6,11 +6,13 @@ export default class Routes extends Component {
     render() {
         return (
             <React.Fragment>
-                <Router>
-                    <Switch>
-                        { routes.map(route => <Route key={ route.path } { ...route }/>) }
-                    </Switch>
-                </Router>
+                <div style={{ height: "100%", overflowX: "hidden" }}>
+                    <Router>
+                        <Switch>
+                            { routes.map(route => <Route key={ route.path } { ...route }/>) }
+                        </Switch>
+                    </Router>
+                </div>
             </React.Fragment>
         );
     }
